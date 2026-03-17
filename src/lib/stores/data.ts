@@ -67,8 +67,15 @@ function startOfMonth(): string {
 }
 
 class ActivityStore {
-	entries: ActivityEntry[] = $state(loadFromStorage<ActivityEntry[]>('at_entries', []));
-	templates: ActivityTemplate[] = $state(loadFromStorage<ActivityTemplate[]>('at_templates', []));
+	entries: ActivityEntry[] = [];
+	templates: ActivityTemplate[] = [];
+
+	constructor() {
+		if (typeof window !== 'undefined') {
+			this.entries = $state(loadFromStorage<ActivityEntry[]>('at_entries', []));
+			this.templates = $state(loadFromStorage<ActivityTemplate[]>('at_templates', []));
+		}
+	}
 
 	private persist(): void {
 		saveToStorage('at_entries', this.entries);
