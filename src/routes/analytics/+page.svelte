@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { store, CATEGORIES } from '$lib/stores/data';
+	import { store, CATEGORIES } from '$lib/stores/data.svelte';
 
 	let categoryStats = $derived(
 		CATEGORIES.map((cat) => {

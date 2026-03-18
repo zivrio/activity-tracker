@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { store, CATEGORIES, INTENSITIES, type Category, type Intensity } from '$lib/stores/data';
+	import { store, CATEGORIES, INTENSITIES, type Category, type Intensity } from '$lib/stores/data.svelte';
 
 	let filterCategory = $state<string>('All');
 	let editingId = $state<string | null>(null);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { store } from '$lib/stores/data';
+	import { store } from '$lib/stores/data.svelte';
 
 	let importText = $state('');
 	let message = $state('');
