@@ -25,6 +25,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-node": "^5.5.4",
 		"chart.js": "^4.5.1",
-		"playwright": "^1.58.2"
+		"playwright": "^1.58.2",
+		"puppeteer": "^24.39.1"
 	}
 }
