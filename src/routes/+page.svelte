@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { store, CATEGORIES, INTENSITIES, type Category, type Intensity } from '$lib/stores/data.svelte';
+	import ConsistencyHeatmap from '$lib/components/ConsistencyHeatmap.svelte';
 
 	let activityName = $state('');
 	let category: Category = $state('Exercise');
@@ -122,6 +123,8 @@
 			</div>
 		{/if}
 	</div>
+
+<ConsistencyHeatmap />
 </div>
 
 <style>
