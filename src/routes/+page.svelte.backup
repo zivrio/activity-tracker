@@ -42,23 +42,23 @@
 
 <svelte:head><title>Dashboard - Activity Tracker</title></svelte:head>
 
-<div class="dashboard-header"><h1>Activity Tracker</h1><p class="subtitle">Track your daily activities and monitor your progress</p></div>
+<h1 class="mb-2">Dashboard</h1>
 
 <div class="grid-4 mb-2">
-	<div class="card text-center stat-card">
+	<div class="card text-center">
 		<div class="text-xs text-muted">Today</div>
 		<div class="font-bold" style="font-size:1.5rem">{formatDuration(store.todayMinutes)}</div>
 		<div class="text-xs text-muted">{store.todayCount} entries</div>
 	</div>
-	<div class="card text-center stat-card">
+	<div class="card text-center">
 		<div class="text-xs text-muted">This Week</div>
 		<div class="font-bold" style="font-size:1.5rem">{formatDuration(store.weekMinutes)}</div>
 	</div>
-	<div class="card text-center stat-card">
+	<div class="card text-center">
 		<div class="text-xs text-muted">This Month</div>
 		<div class="font-bold" style="font-size:1.5rem">{formatDuration(store.monthMinutes)}</div>
 	</div>
-	<div class="card text-center stat-card">
+	<div class="card text-center">
 		<div class="text-xs text-muted">Streak</div>
 		<div class="font-bold" style="font-size:1.5rem">{store.streak} day{store.streak !== 1 ? 's' : ''}</div>
 	</div>
@@ -125,7 +125,6 @@
 </div>
 
 <style>
-	:global(body) { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
 	.entry-row {
 		padding: 0.5rem 0;
 		border-bottom: 1px solid var(--border);
