@@ -51,6 +51,10 @@ function toggleTheme() {
 					{item.label}
 				</a>
 			{/each}
+			<button class="nav-item theme-toggle" onclick={toggleTheme}>
+				<span class="nav-icon">{isDark ? "☀" : "🌙"}</span>
+				{isDark ? "Light" : "Dark"}
+			</button>
 		</nav>
 	</aside>
 	{#if menuOpen}
