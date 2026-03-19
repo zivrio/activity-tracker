@@ -1,9 +1,23 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/state';
+import { onMount } from 'svelte';
 
 	let { children } = $props();
 	let menuOpen = $state(false);
+let isDark = $state(true);
+
+onMount(() => {
+	const saved = localStorage.getItem("theme");
+	isDark = saved === "dark";
+	document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+});
+
+function toggleTheme() {
+	isDark = !isDark;
+	localStorage.setItem("theme", isDark ? "dark" : "light");
+	document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+}
 
 	const navItems = [
 		{ href: '/', label: 'Dashboard', icon: '◉' },

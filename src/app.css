@@ -114,3 +114,14 @@ h3 { font-size: 1rem; font-weight: 600; }
 @media (max-width: 768px) {
 	.grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
+
+[data-theme="dark"] {
+	--bg: #0f172a;
+	--bg-card: #1e293b;
+	--bg-sidebar: #1e293b;
+	--text: #e2e8f0;
+	--text-muted: #94a3b8;
+	--text-sidebar: #e2e8f0;
+	--border: #334155;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
